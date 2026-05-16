@@ -5,7 +5,7 @@ Maintainer: LFRon <ronforever@qq.com>
 Rules-Requires-Root: no
 Build-Depends: debhelper-compat (= 12)
 Build-Depends-Arch: bc, bison, flex, linux-libc-dev, build-essential, openssl, patch, zstd,
- gcc,g++,
+ gcc, g++, cpio,
  kmod, libdw-dev:native, libelf-dev:native,
  libssl-dev:native, libssl-dev <!pkg.linux-upstream.nokernelheaders>,
  python3:native, rsync, rustc | rustup
@@ -27,5 +27,5 @@ Multi-Arch: same
 Package: linux-headers-6.12.89-x64
 Architecture: amd64
 Build-Profiles: <!pkg.linux-upstream.nokernelheaders>
-Depends: gcc,g++
+Depends: gcc, g++, cpio
 Description: Linux kernel headers on amd64, This package provides kernel header files on amd64. This is useful for people who need to build external modules
